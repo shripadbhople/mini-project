@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCAM DETECTOR HUB</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #00203FFF;
+    }
+   .container {
+      margin-top: 5%;
+      padding: 2rem;
+      border: 1px solid #676666;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgb(251, 248, 248);
+    }
+   .form-group label {
+      font-weight: bold;
+      color: #333;
+    }
+   .form-group textarea {
+      resize: vertical;
+    }
+   .btn-primary {
+      background-color: #ADEFD1FF;
+      border-color: #ADEFD1FF;
+    }
+   .btn-primary:hover {
+      background-color: #ADEFD1FF;
+      border-color: #ADEFD1FF;
+    }
+  </style>
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">SCAM DETECTOR HUB</h1>
+    <!-- Registration form -->
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </form>
+  </div>
+  <!-- Custom JavaScript -->
+  <script>
+    // Listen for the form submission event
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Collect form data
+      const formData = new FormData(event.target);
+      const username = formData.get('username');
+      const email = formData.get('email');
+      const password = formData.get('password');
+
+      // Send a POST request to the server-side endpoint to register the user
+      fetch('/register', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, email, password })
+      })
+     .then(response => {
+          // If the response is successful, parse the JSON data
+          if (response.ok) {
+              return response.json();
+          } else {
+              // If the response is not successful, throw an error
+              throw new Error('Error while registering.');
+          }
+      })
+     .then(data => {
+          // Log the successful registration to the console
+          console.log('User registered successfully:', data);
+
+          // Redirect the user to the login page
+          window.location.href = '/login';
+      })
+     .catch(error => {
+          // Log the error to the console
+          console.error('Error while registering:', error);
+
+          // Display an error message to the user
+          alert('An error occurred while registering. Please check your input and try again.');
+      });
+    });
+  </script>
+</body>
+</html>

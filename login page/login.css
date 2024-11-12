@@ -1,0 +1,46 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #00203FFF;
+
+}
+
+.container {
+  margin-top: 5%;
+  padding: 2rem;
+  border: 1px solid #676666;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(245, 240, 240, 0.988);
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-primary {
+    background-color: #ADEFD1FF;
+    
+    border-color: #76c1d4;
+    
+}
+
+.btn-primary:hover {
+  background-color: #76c1d4;
+    
+  border-color: #76c1d4;
+   
+}
+
+.text-muted a {
+    color: #76c1d4;
+
+}
+
+.text-muted a:hover {
+  text-decoration: underline;
+}

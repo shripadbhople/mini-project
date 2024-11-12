@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+  }
+  nav{
+    height: 80px;
+    width: 100%;
+    background-color:   #00203FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  label.logo{
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+      color: #fff;
+  }
+  nav ul{
+      float: right;
+      margin-right: 200px;
+  }
+  nav ul li{
+      display: inline-block;
+      line-height: 80px;
+      padding: 0 13px;
+      margin: 0 5px;
+  }
+  nav ul li a{
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #fff;
+  }
+  .line{
+      font-size: medium;
+  }
+  img{
+      float: right;
+      width: 100ch;
+      padding: 140px 140px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .content h1{
+      color: #333;
+      font-size: 45px;
+      padding: 100px 100px;
+  }
+  button{
+      width: 271px;
+      padding: 10px;
+      margin: 10px 180px;
+      font-size: 22px;
+      background-color:#e1b382;
+      border: 1px solid #e1b382;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  button:hover {
+      background-color: #e1b382;
+      border-color:#e1b382;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .container {
+      margin-top: 5%;
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .form-group label {
+      font-weight: bold;
+      color: #333;
+  }
+  .form-group textarea {
+      resize: vertical;
+  }
+  .btn-primary {
+      background-color: #e1b382;
+      border-color: #e1b382;
+  }
+  .btn-primary:hover {
+      background-color: #e1b382;
+      border-color:#e1b382;
+  }

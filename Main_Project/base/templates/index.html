@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Profile Detection</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style/style.css')}}">
+</head>
+<body>
+  <h1>Fake Profile Detection</h1>
+  <form action="form" method="post">
+    <label for="profile_pic">Profile Picture(0 for No, 1 for Yes):</label><br>
+    <input type="number" id="profile_pic" name="profile_pic" required><br><br>
+
+
+    <label for="fullname_word">Number of alpahbet in Username: </label><br>
+    <input type="number" id="fullname_word" name="fullname_word" required><br><br>
+
+    <label for="private">Private Profile (0 for No, 1 for Yes):</label><br>
+    <input type="number" id="private" name="private" min="0" max="1" required><br><br>
+
+
+    <label for="description">Enter Description Length:</label><br>
+    <input type="number" id="description" name="description" required><br><br>
+
+    <label for="posts">Number of Posts:</label><br>
+    <input type="number" id="posts" name="posts" required><br><br>
+
+    <label for="followers">Number of Followers:</label><br>
+    <input type="number" id="followers" name="followers" required><br><br>
+
+    <label for="follows">Number of Follows:</label><br>
+    <input type="number" id="follows" name="follows" required><br><br>
+
+    <button type="submit">Predict</button>
+  </form>
+  
+</body>
+</html>
